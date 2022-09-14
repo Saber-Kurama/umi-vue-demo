@@ -1,6 +1,6 @@
 <template>
   <div class="navs">
-    <ul>
+    <!-- <ul>
       <li>
         <router-link to="/">Home</router-link>
       </li>
@@ -10,7 +10,7 @@
       <li>
         <a href="https://github.com/umijs/umi">Github</a>
       </li>
-    </ul>
+    </ul> -->
     <router-view></router-view>
   </div>
 </template>

@@ -1,4 +1,4 @@
 export default {
-  npmClient: 'pnpm',
-  presets: [require.resolve('@umijs/preset-vue')],
+  npmClient: "pnpm",
+  presets: [require.resolve("@umijs/preset-vue")],
 };
