@@ -1,13 +1,18 @@
 {
   "private": true,
+  "name": "umi-vue-demo",
   "author": "guochao <463561248@qq.com>",
   "scripts": {
+    "bootstrap:dev": "NODE_ENV=development pnpm install",
     "dev": "umi dev",
     "build": "umi build",
     "postinstall": "umi setup",
     "start": "npm run dev"
   },
   "dependencies": {
+    "@arco-design/web-vue": "^2.37.3",
+    "@arco-themes/vue-digitforce": "^0.0.38",
+    "@dangojs/digitforce-ui": "^0.0.3",
     "@formily/core": "^2.2.4",
     "@formily/element-plus": "1.0.0-beta.6",
     "@formily/vue": "^2.2.4",
