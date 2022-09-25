@@ -15,10 +15,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import "@arco-themes/vue-digitforce/index.less";
-import "@dangojs/digitforce-ui/style/index.less";
-</script>
+<script setup lang="ts"></script>
 
 <style lang="less">
 .navs {
