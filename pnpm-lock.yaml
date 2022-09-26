@@ -4,14 +4,17 @@ specifiers:
   '@arco-design/web-vue': ^2.37.3
   '@arco-themes/vue-digitforce': ^0.0.38
   '@dangojs/digitforce-ui': link:///Users/saber/coding/work/digitforce-ui/packages/digitforce-ui
+  '@dangojs/digitforce-ui-utils': link:///Users/saber/coding/work/digitforce-ui/packages/utils
   '@formily/core': ^2.2.4
   '@formily/element-plus': 1.0.0-beta.6
   '@formily/vue': ^2.2.4
+  '@types/lodash-es': ^4.17.6
   '@umijs/preset-vue': ^4.0.20
   '@vue/babel-plugin-jsx': ^1.1.1
   '@vue/babel-preset-app': ^5.0.8
   core-js: ^3.25.1
   element-plus: ^2.2.16
+  lodash-es: ^4.17.21
   sass: ^1.34.1
   sass-loader: ^8.0.2
   typescript: ^4.1.2
@@ -22,6 +25,7 @@ dependencies:
   '@arco-design/web-vue': registry.npmjs.org/@arco-design/web-vue/2.37.3_vue@3.2.39
   '@arco-themes/vue-digitforce': registry.npmjs.org/@arco-themes/vue-digitforce/0.0.38_bnpufdpant562yjwjlzefqra7m
   '@dangojs/digitforce-ui': link:../../work/digitforce-ui/packages/digitforce-ui
+  '@dangojs/digitforce-ui-utils': link:../../work/digitforce-ui/packages/utils
   '@formily/core': 2.2.4
   '@formily/element-plus': 1.0.0-beta.6_arz4dztosvwy2ghjrlh2wdhejm
   '@formily/vue': 2.2.4_arz4dztosvwy2ghjrlh2wdhejm
@@ -32,10 +36,12 @@ dependencies:
   vue: 3.2.39
 
 devDependencies:
+  '@types/lodash-es': 4.17.6
   '@umijs/preset-vue': 4.0.20
   '@vue/babel-plugin-jsx': 1.1.1
   '@vue/babel-preset-app': 5.0.8_core-js@3.25.1+vue@3.2.39
   core-js: 3.25.1
+  lodash-es: 4.17.21
   typescript: 4.8.3
 
 packages:
@@ -2385,11 +2391,9 @@ packages:
     resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
     dependencies:
       '@types/lodash': 4.14.185
-    dev: false
 
   /@types/lodash/4.14.185:
     resolution: {integrity: sha512-evMDG1bC4rgQg4ku9tKpuMh5iBNEwNa3tf9zRHdP1qlv+1WUg44xat4IxCE14gIpZRGUUWAx2VhItCZc25NfMA==}
-    dev: false
 
   /@types/mime/3.0.1:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
@@ -5045,6 +5049,10 @@ packages:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
     dev: false
 
+  /is-arrayish/0.3.2:
+    resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==}
+    dev: false
+
   /is-arrow-function/2.0.3:
     resolution: {integrity: sha512-iDStzcT1FJMzx+TjCOK//uDugSe/Mif/8a+T0htydQ3qkJGvSweTZpVYz4hpJH0baloSPiAFQdA8WslAgJphvQ==}
     engines: {node: '>= 0.4'}
@@ -5457,7 +5465,6 @@ packages:
 
   /lodash-es/4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
 
   /lodash-unified/1.0.2_3ib2ivapxullxkx3xftsimdk7u:
     resolution: {integrity: sha512-OGbEy+1P+UT26CYi4opY4gebD8cWRDxAT6MAObIVQMiqYdxZr1g3QHWCToVsm31x2NkLS4K3+MC2qInaRMa39g==}
@@ -7118,6 +7125,12 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: false
 
+  /simple-swizzle/0.2.2:
+    resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
+    dependencies:
+      is-arrayish: 0.3.2
+    dev: false
+
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -7991,19 +8004,7 @@ packages:
     name: color-convert
     version: 1.9.3
     dependencies:
-      color-name: registry.npmjs.org/color-name/1.1.3
-    dev: false
-
-  registry.npmjs.org/color-name/1.1.3:
-    resolution: {integrity: sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz}
-    name: color-name
-    version: 1.1.3
-    dev: false
-
-  registry.npmjs.org/color-name/1.1.4:
-    resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz}
-    name: color-name
-    version: 1.1.4
+      color-name: 1.1.3
     dev: false
 
   registry.npmjs.org/color-string/1.9.1:
@@ -8011,8 +8012,8 @@ packages:
     name: color-string
     version: 1.9.1
     dependencies:
-      color-name: registry.npmjs.org/color-name/1.1.4
-      simple-swizzle: registry.npmjs.org/simple-swizzle/0.2.2
+      color-name: 1.1.4
+      simple-swizzle: 0.2.2
     dev: false
 
   registry.npmjs.org/color/3.2.1:
@@ -8712,12 +8713,6 @@ packages:
     version: 4.2.10
     dev: false
 
-  registry.npmjs.org/is-arrayish/0.3.2:
-    resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.3.2.tgz}
-    name: is-arrayish
-    version: 0.3.2
-    dev: false
-
   registry.npmjs.org/number-precision/1.5.2:
     resolution: {integrity: sha512-q7C1ZW3FyjsJ+IpGB6ykX8OWWa5+6M+hEY0zXBlzq1Sq1IPY9GeI3CQ9b2i6CMIYoeSuFhop2Av/OhCxClXqag==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/number-precision/-/number-precision-1.5.2.tgz}
     name: number-precision
@@ -8736,12 +8731,4 @@ packages:
     version: 2.2.29
     dependencies:
       compute-scroll-into-view: registry.npmjs.org/compute-scroll-into-view/1.0.17
-    dev: false
-
-  registry.npmjs.org/simple-swizzle/0.2.2:
-    resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz}
-    name: simple-swizzle
-    version: 0.2.2
-    dependencies:
-      is-arrayish: registry.npmjs.org/is-arrayish/0.3.2
     dev: false
