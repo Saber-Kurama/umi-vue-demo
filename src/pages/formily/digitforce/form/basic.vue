@@ -1,5 +1,5 @@
 <template>
-  <BForm :model="form" :style="{ width: '600px' }" @submit="handleSubmit">
+  <FFrom :model="form" :style="{ width: '600px' }" @submit="handleSubmit">
     <a-form-item field="name" label="Username">
       <a-input
         v-model="form.name"
@@ -15,38 +15,26 @@
     <a-form-item>
       <a-button html-type="submit">Submit</a-button>
     </a-form-item>
-  </BForm>
+  </FFrom>
   {{ form }}
 </template>
 
-<script>
+<script setup>
 import { reactive } from "vue";
 import { Form } from "@dangojs/digitforce-ui";
 import { Form as AFrom } from "@arco-design/web-vue";
+// import { Form as FFrom } from "@dangojs/formily-digitforce-ui";
 import { transformComponent } from "@/utils/transform-component";
 
-console.log("Form", Form);
+// console.log("Form", Form);
 const CForm = transformComponent(AFrom);
-export default {
-  components: {
-    BForm: Form,
-    CForm: CForm,
-  },
 
-  setup() {
-    const form = reactive({
-      name: "",
-      post: "",
-      isRead: false,
-    });
-    const handleSubmit = (data) => {
-      console.log(data);
-    };
-
-    return {
-      form,
-      handleSubmit,
-    };
-  },
+const form = reactive({
+  name: "",
+  post: "",
+  isRead: false,
+});
+const handleSubmit = (data) => {
+  console.log(data);
 };
 </script>

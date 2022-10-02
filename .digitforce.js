@@ -1,7 +1,7 @@
 /*
  * @Author: saber
  * @Date: 2022-01-12 19:57:21
- * @LastEditTime: 2022-09-26 09:54:23
+ * @LastEditTime: 2022-10-01 09:00:42
  * @LastEditors: saber
  * @Description:
  */
@@ -9,6 +9,8 @@ const dangojsComBasePath =
   "/Users/saber/coding/mygithub/vue3-arco-pro-components/packages";
 const digitforceUIPath =
   "/Users/saber/coding/work/digitforce-ui/packages/digitforce-ui";
+const digitforceFormilyUIPath =
+  "/Users/saber/coding/work/formily-digitforce/packages/components";
 const digitforceUtilsPath =
   "/Users/saber/coding/work/digitforce-ui/packages/utils";
 // TODO: 这个需要通过 digitforceBasePath 来得到 绝对路径，目前是手写
@@ -18,6 +20,7 @@ const digitforceUtilsPath =
 const linkPaths = {
   // '@dangojs/a-query-header': `file://${dangojsComBasePath}/query-header`,
   // '@dangojs/a-left-menu': `file://${dangojsComBasePath}/left-menu`
+  "@dangojs/formily-digitforce-ui": `link://${digitforceFormilyUIPath}`,
   "@dangojs/digitforce-ui": `link://${digitforceUIPath}`,
   "@dangojs/digitforce-ui-utils": `link://${digitforceUtilsPath}`,
 };

@@ -5,6 +5,7 @@ specifiers:
   '@arco-themes/vue-digitforce': ^0.0.38
   '@dangojs/digitforce-ui': link:///Users/saber/coding/work/digitforce-ui/packages/digitforce-ui
   '@dangojs/digitforce-ui-utils': link:///Users/saber/coding/work/digitforce-ui/packages/utils
+  '@dangojs/formily-digitforce-ui': link:///Users/saber/coding/work/formily-digitforce/packages/components
   '@formily/core': ^2.2.4
   '@formily/element-plus': 1.0.0-beta.6
   '@formily/vue': ^2.2.4
@@ -26,6 +27,7 @@ dependencies:
   '@arco-themes/vue-digitforce': registry.npmjs.org/@arco-themes/vue-digitforce/0.0.38_bnpufdpant562yjwjlzefqra7m
   '@dangojs/digitforce-ui': link:../../work/digitforce-ui/packages/digitforce-ui
   '@dangojs/digitforce-ui-utils': link:../../work/digitforce-ui/packages/utils
+  '@dangojs/formily-digitforce-ui': link:../../work/formily-digitforce/packages/components
   '@formily/core': 2.2.4
   '@formily/element-plus': 1.0.0-beta.6_arz4dztosvwy2ghjrlh2wdhejm
   '@formily/vue': 2.2.4_arz4dztosvwy2ghjrlh2wdhejm
