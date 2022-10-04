@@ -10,6 +10,11 @@ export default {
       __dirname,
       "./node_modules/@arco-design/web-vue"
     )}`,
+    "@formily/core": `${path.resolve(
+      __dirname,
+      "./node_modules/@formily/core"
+    )}`,
+    "@formily/vue": `${path.resolve(__dirname, "./node_modules/@formily/vue")}`,
   },
   npmClient: "pnpm",
   extraBabelPlugins: ["@vue/babel-plugin-jsx"],

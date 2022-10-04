@@ -1,5 +1,5 @@
 <template>
-  <FFrom :model="form" :style="{ width: '600px' }" @submit="handleSubmit">
+  <FFrom :form="form1" :style="{ width: '600px' }" @submit="handleSubmit">
     <a-form-item field="name" label="Username">
       <a-input
         v-model="form.name"
@@ -23,11 +23,14 @@
 import { reactive } from "vue";
 import { Form } from "@dangojs/digitforce-ui";
 import { Form as AFrom } from "@arco-design/web-vue";
-// import { Form as FFrom } from "@dangojs/formily-digitforce-ui";
+import { Form as FFrom } from "@dangojs/formily-digitforce-ui";
 import { transformComponent } from "@/utils/transform-component";
+import { createForm } from "@formily/core";
 
 // console.log("Form", Form);
+
 const CForm = transformComponent(AFrom);
+const form1 = createForm();
 
 const form = reactive({
   name: "",
